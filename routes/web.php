@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn() => view('company.index'));
+Route::get('/', fn () => view('company.index'));
 
 Route::get('/admin-login', function () {
     return redirect(route('filament.admin.auth.login'));
@@ -30,4 +30,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Pastry extends Model
 {
     protected $fillable = [
-        'name', 'type', 'award_winning'
+        'name', 'type', 'award_winning',
     ];
 
     protected $casts = [
@@ -16,14 +17,16 @@ class Pastry extends Model
     ];
 
     protected $hidden = [
-        'created_at', 'updated_at'
+        'created_at', 'updated_at',
     ];
 
-    public function ingredients() {
+    public function ingredients(): HasMany
+    {
         return $this->hasMany(Ingredient::class);
     }
 
-    public function price() {
+    public function price(): HasOne
+    {
         return $this->hasOne(Price::class);
     }
 }

@@ -3,19 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\NavigationItemResource\Pages;
-use App\Filament\Resources\NavigationItemResource\RelationManagers;
 use App\Models\NavigationItem;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class NavigationItemResource extends Resource
 {
     protected static ?string $model = NavigationItem::class;
+
     protected static ?string $modelLabel = 'navigáció';
 
     protected static ?string $pluralModelLabel = 'navigációk';
@@ -42,7 +40,7 @@ class NavigationItemResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->label('Név'),
                 Tables\Columns\TextColumn::make('link')
-                ->label('Link'),
+                    ->label('Link'),
             ])
             ->filters([
                 //

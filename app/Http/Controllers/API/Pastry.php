@@ -5,27 +5,27 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreatePastryRequest;
 use App\Models\Pastry as PastryModel;
+use Illuminate\Http\Response;
+use Illuminate\Support\Collection;
 
 class Pastry extends Controller
 {
-
-    public function index()
+    public function index(): Collection
     {
         return PastryModel::all();
     }
 
-    public function store(CreatePastryRequest $request)
+    public function store(CreatePastryRequest $request): PastryModel
     {
-
         return PastryModel::create($request->validated());
     }
 
-    public function show(string $id)
+    public function show(string $id): PastryModel
     {
         return PastryModel::find($id);
     }
 
-    public function update(CreatePastryRequest $request, string $id)
+    public function update(CreatePastryRequest $request, string $id): PastryModel
     {
         PastryModel::find($id)
             ->update($request->validated());
@@ -33,10 +33,10 @@ class Pastry extends Controller
         return PastryModel::find($id);
     }
 
-    public function destroy(string $id)
+    public function destroy(string $id): Response
     {
         PastryModel::find($id)->delete();
 
-        return response("", 200);
+        return response('', 200);
     }
 }
