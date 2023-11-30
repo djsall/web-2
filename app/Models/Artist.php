@@ -9,6 +9,9 @@ class Artist extends Model
 {
     protected $table = 'alkoto';
 
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
     protected $fillable = [
         'nev',
     ];

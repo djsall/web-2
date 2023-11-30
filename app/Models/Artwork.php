@@ -9,6 +9,9 @@ class Artwork extends Model
 {
     protected $table = 'mu';
 
+    public $timestamps = false;
+
+    protected $primaryKey = 'id';
     protected $fillable = [
         'cim',
         'eredeti',
