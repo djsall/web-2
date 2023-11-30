@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => view('company.index'));
 
+Route::get('/admin-login', function () {
+    return redirect(route('filament.admin.auth.login'));
+})->name('filament-login');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

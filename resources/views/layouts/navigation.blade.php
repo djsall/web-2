@@ -48,6 +48,12 @@
                         </x-slot>
 
                         <x-slot name="content">
+                            @if(Auth::user()->role == \App\Enums\UserRole::admin)
+                                <x-dropdown-link :href="route('filament-login')">
+                                    Adminisztráció
+                                </x-dropdown-link>
+                            @endif
+
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
@@ -107,6 +113,11 @@
                 </div>
 
                 <div class="mt-3 space-y-1">
+                    @if(Auth::user()->role == \App\Enums\UserRole::admin)
+                        <x-responsive-nav-link :href="route('filament-login')">
+                            Adminisztráció
+                        </x-responsive-nav-link>
+                    @endif
                     <x-responsive-nav-link :href="route('profile.edit')">
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
