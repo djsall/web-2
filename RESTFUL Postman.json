@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "fd622be5-eeda-4170-9102-dc1342d1068b",
+		"name": "requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"description": "",
+				"method": "GET",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" },
+					{ "key": "User-Agent", "value": "insomnia/8.3.0" },
+					{ "key": "Authorization", "value": "pottyos-labda" }
+				],
+				"body": { "mode": "raw", "raw": "" },
+				"url": {
+					"raw": "https://beadando.test/api/artists",
+					"protocol": "https",
+					"host": ["beadando", "test"],
+					"path": ["api", "artists"]
+				},
+				"auth": {}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"description": "",
+				"method": "GET",
+				"header": [{ "key": "User-Agent", "value": "insomnia/8.3.0" }],
+				"url": {
+					"raw": "https://beadando.test/api/artists/268",
+					"protocol": "https",
+					"host": ["beadando", "test"],
+					"path": ["api", "artists", "268"]
+				},
+				"auth": {}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"description": "",
+				"method": "POST",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" },
+					{ "key": "User-Agent", "value": "insomnia/8.3.0" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nev\": \"Liszt Ferenc Jozsef\"\n}"
+				},
+				"url": {
+					"raw": "https://beadando.test/api/artists/create",
+					"protocol": "https",
+					"host": ["beadando", "test"],
+					"path": ["api", "artists", "create"]
+				},
+				"auth": {}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"description": "",
+				"method": "PUT",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" },
+					{ "key": "User-Agent", "value": "insomnia/8.3.0" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nev\": \"Liszt Ferenc Friderikusz\"\n}"
+				},
+				"url": {
+					"raw": "https://beadando.test/api/artists/269/update",
+					"protocol": "https",
+					"host": ["beadando", "test"],
+					"path": ["api", "artists", "269", "update"]
+				},
+				"auth": {}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"description": "",
+				"method": "DELETE",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" },
+					{ "key": "User-Agent", "value": "insomnia/8.3.0" }
+				],
+				"body": { "mode": "raw", "raw": "" },
+				"url": {
+					"raw": "https://beadando.test/api/artists/267/delete",
+					"protocol": "https",
+					"host": ["beadando", "test"],
+					"path": ["api", "artists", "267", "delete"]
+				},
+				"auth": {}
+			},
+			"response": []
+		}
+	]
+}
