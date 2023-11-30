@@ -31,8 +31,13 @@ Access the admin panel at ```<web_address_of_app>/admin```
   databas links is not supported (2 / b)
 
 ### RESTFUL API
+
 - use the ```Restful postman.json``` file provided in the repository, to test the ```pastry``` API resource. (4)
 
 ### Application
+
 - visiting the homepage will reveal the company introduction page (1)
-- clicking the Laravel logo on the navigation bar will take you to the login page
+- clicking the Laravel logo on the navigation bar will take you to the login page (you can also
+  use ```<web_address_of_app>/login``` and ```<web_address_of_app>/register```)
+- after signing up and logging in, you will be greeted with a chart ob the user level dashboard, which shows the
+  distribution of users and administrators in the system using chart.js (7)
