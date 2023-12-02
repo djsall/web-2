@@ -16,7 +16,7 @@
   credentials
 - run the ```php artisan key:generate``` command to make the cryptography key for the app
 - build the assets with the ```npm run build``` terminal command
-- create the database with the ```php artisan migrate``` command. 
+- create the database with the ```php artisan migrate``` command.
 - create an administrative user ```php artisan make:filament-user```. After creating, you will have to change the
   user's ```role``` in the database from ```user``` to ```admin```.
 - you can also use the applications web interface to sign up, it's the same result and you still will have to change the
@@ -37,9 +37,10 @@ Access the admin panel at ```<web_address_of_app>/admin```
 
 ### Application
 
-- visiting the homepage will reveal the company introduction page (1)
+- visiting the homepage (```<web_address_of_app>/login```) will reveal the company introduction page (1)
 - clicking the Laravel logo on the navigation bar will take you to the login page (you can also
   use ```<web_address_of_app>/login``` and ```<web_address_of_app>/register```)
 - after signing up and logging in, you will be greeted with a chart ob the user level dashboard, which shows the
   distribution of users and administrators in the system using chart.js (7)
-- also on this dashboard, you can search the pastries stored in the database. (6, 3)
+- also on this dashboard, you can search the pastries stored in the database. The search is based on a javascript
+  class (6, 3)
