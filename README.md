@@ -16,6 +16,7 @@
   credentials
 - run the ```php artisan key:generate``` command to make the cryptography key for the app
 - build the assets with the ```npm run build``` terminal command
+- create the database with the ```php artisan migrate``` command. 
 - create an administrative user ```php artisan make:filament-user```. After creating, you will have to change the
   user's ```role``` in the database from ```user``` to ```admin```.
 - you can also use the applications web interface to sign up, it's the same result and you still will have to change the
