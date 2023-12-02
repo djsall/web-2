@@ -12,7 +12,7 @@ class Pastry extends Controller
 {
     public function index(): Collection
     {
-        return PastryModel::all();
+        return PastryModel::with('ingredients', 'price')->get();
     }
 
     public function store(CreatePastryRequest $request): PastryModel

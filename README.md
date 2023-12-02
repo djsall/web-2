@@ -28,7 +28,7 @@ Access the admin panel at ```<web_address_of_app>/admin```
 
 - you can manage the users of the application (2 / d)
 - you can upload navigation items, which are stored inside the database. Please use full URL's, route parsing from
-  databas links is not supported (2 / b)
+  databas links is not supported. This is why they are only visible on the home page. (2 / b)
 
 ### RESTFUL API
 
@@ -41,3 +41,4 @@ Access the admin panel at ```<web_address_of_app>/admin```
   use ```<web_address_of_app>/login``` and ```<web_address_of_app>/register```)
 - after signing up and logging in, you will be greeted with a chart ob the user level dashboard, which shows the
   distribution of users and administrators in the system using chart.js (7)
+- also on this dashboard, you can search the pastries stored in the database. (6, 3)
